@@ -1,0 +1,7 @@
+{
+  "name": "OmniScribe Health",
+  "description": "Next-generation AI Medical Scribe & Clinic Operating System with ambient SOAP generation, FHIR export, 3D bed management, and clinical decision support.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
