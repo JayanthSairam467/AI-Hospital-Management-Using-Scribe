@@ -1,26 +1,68 @@
-# OmniScribe Health: AI-Powered Hospital Management System
+<div align="center">
+  <img src="https://api.iconify.design/lucide:hospital.svg?color=%232563eb" width="80" height="80" alt="OmniScribe Logo" />
+  <h1>OmniScribe Health</h1>
+  <h3>Next-Generation AI Hospital Management & Clinical Logistics</h3>
+  <p><i>Automating clinical documentation, hospital logistics, and emergency response with Artificial Intelligence.</i></p>
 
-OmniScribe Health is a next-generation, AI-driven hospital management dashboard designed to reduce administrative burden on healthcare professionals, optimize hospital logistics, and improve patient outcomes through real-time intelligence.
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+    <img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini AI" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node" />
+  </p>
+</div>
 
-## 🚀 Key Features
+<br />
 
-*   **🎙️ AI Medical Scribe:** Uses Google's Gemini AI to listen to doctor-patient conversations and automatically generate structured, clinical-grade SOAP notes.
-*   **🔐 Role-Based Access Control (RBAC):** Customized, secure views for Doctors, Nurses, Pharmacists, and Admins. Restricts sensitive modules via permissions.
-*   **🛡️ PHI Privacy Masking (HIPAA Safe Harbor):** A global toggle that instantly masks Protected Health Information (PHI) such as patient names, MRNs, DOBs, and allergies across all dashboard views.
-*   **🚑 Live Ambulance Telemetry:** Interactive Leaflet maps tracking real-time ambulance GPS locations alongside live patient vitals transmitted directly from the field.
-*   **🛏️ 3D Bed Management:** Visual, spatial tracking of ward occupancy, bed status (Triage, ICU, Sanitization), and oxygen manifold levels.
-*   **📦 Automated Inventory & Auto-Reorder:** Real-time pharmacy stock monitoring with a web-hook and NodeMailer integration that automatically emails purchase orders to suppliers when stock drops below 10%.
-*   **🤖 AI "What-If" Clinical Support:** Chat-based clinical decision support tool allowing doctors to query alternative treatments and medication conflicts.
+## 🌟 The Vision
+Healthcare professionals currently spend up to **40% of their day** on administrative paperwork and manual logistics. **OmniScribe Health** changes the paradigm. By leveraging state-of-the-art Generative AI, real-time telemetry, and automated workflows, OmniScribe gives doctors their time back—allowing them to focus on what matters most: **Saving Lives.**
 
-## 🛠️ Tech Stack
+---
 
-*   **Frontend:** React (Vite), TypeScript, Tailwind CSS
-*   **UI Components:** Framer Motion (Animations), Lucide React (Icons)
-*   **Mapping:** React-Leaflet, OpenStreetMap
-*   **AI / Backend integrations:** Google Gemini API, Node.js (Express)
-*   **Email Automation:** NodeMailer
+## 🏆 Core Innovations (Hackathon Highlights)
 
-## ⚙️ Installation & Setup
+### 🎙️ 1. Autonomous AI Medical Scribe
+* **The Problem:** Manual charting leads to burnout and delayed patient care.
+* **The Solution:** An integrated AI assistant powered by **Google Gemini** that listens to doctor-patient consultations, performs speaker diarization, and instantly generates structured **SOAP (Subjective, Objective, Assessment, Plan)** notes. It extracts medical entities, diagnoses, and prescriptions with high clinical accuracy.
+
+### 🚑 2. Real-Time Emergency Telemetry (ER)
+* **The Problem:** ERs lack visibility into incoming ambulance patients.
+* **The Solution:** A live `React-Leaflet` map integration with OSRM routing providing live ETAs. Simultaneously, the system streams the in-transit patient's critical vitals (BPM, SpO2, Blood Pressure) directly to the ER dashboard *before* the ambulance arrives.
+
+### 🔐 3. Enterprise Security & HIPAA Compliance
+* **The Problem:** Medical software must protect patient data without slowing down collaboration.
+* **The Solution:** 
+  * **PHI Privacy Toggle (Safe Harbor):** A global UI toggle that instantly anonymizes all Protected Health Information (Names, MRNs, DOBs, Allergies) into encrypted formats for safe screen-sharing and non-cleared staff viewing.
+  * **Strict RBAC:** Role-Based Access Control ensuring distinct, restricted workspaces for Doctors, Nurses, Pharmacists, and Administrators.
+
+### 📦 4. Autonomous Pharmacy Supply Chain
+* **The Problem:** Hospitals frequently face unexpected shortages of critical medications.
+* **The Solution:** An algorithmic inventory tracker. When a medication drops below the 10% critical threshold, the system autonomously triggers a webhook via `NodeMailer`, generating and emailing a formatted Purchase Order directly to the pharmaceutical supplier—zero human intervention required.
+
+### 🛏️ 5. Spatial Bed & Resource Management
+* **The Problem:** Inefficient patient flow and bed allocation.
+* **The Solution:** Real-time visual tracking of ward occupancy, bed sanitization statuses (Triage, ICU, General), and central oxygen manifold pressures to optimize hospital capacity.
+
+---
+
+## 💻 Technical Architecture
+
+### Frontend 
+* **Framework:** React 18 (Vite) + TypeScript
+* **Styling:** Tailwind CSS + Custom CSS Keyframes
+* **UI/UX:** Framer Motion (Fluid transitions), Lucide React (Iconography)
+* **Maps:** React-Leaflet, OpenStreetMap Tiles
+* **Performance:** React `lazy()` and `Suspense` for chunk optimization and rapid loading.
+
+### Backend & AI 
+* **Runtime:** Node.js + Express
+* **AI Engine:** `@google/genai` (Gemini 3.7 Flash) configured with strict JSON schemas for predictable clinical outputs.
+* **Automation:** Webhooks & NodeMailer for SMTP email automation.
+
+---
+
+## ⚙️ Quick Start Installation
 
 1. **Clone the repository**
    ```bash
@@ -34,24 +76,24 @@ OmniScribe Health is a next-generation, AI-driven hospital management dashboard 
    ```
 
 3. **Configure Environment Variables**
-   Create a `.env` file in the root directory and add the following:
+   Create a `.env` file in the root directory:
    ```env
-   # API Keys
+   # Google Gemini API for the AI Scribe
    GEMINI_API_KEY=your_google_gemini_api_key
 
-   # Email configuration for Auto-Reorder system
+   # SMTP Configuration for Auto-Reorder System
    SMTP_USER=your_email@gmail.com
    SMTP_PASS=your_app_password
    ```
 
-4. **Run the Development Server**
+4. **Boot the Hospital Matrix**
    ```bash
    npm run dev
    ```
-   The application will be available at `http://localhost:3000`.
+   *The application will deploy locally at `http://localhost:3000`.*
 
-## 🔒 Privacy & Compliance
-This application features a built-in "PHI Privacy Toggle" to demonstrate HIPAA Safe Harbor compliance techniques, instantly anonymizing patient data for presentation or non-cleared staff viewing.
+---
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div align="center">
+  <p><i>Built with precision for the future of healthcare.</i></p>
+</div>
