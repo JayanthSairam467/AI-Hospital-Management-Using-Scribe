@@ -94,6 +94,18 @@ Healthcare professionals currently spend up to **40% of their day** on administr
 
 ---
 
+## 📚 Acknowledgements & Citations
+
+This project was made possible by incredible open-source tools and medical standards:
+* **AI:** [Google Gemini API](https://ai.google.dev/)
+* **Mapping:** [OpenStreetMap](https://www.openstreetmap.org/copyright), [React-Leaflet](https://leafletjs.com/), and [OSRM](http://project-osrm.org/)
+* **Standards:** [HHS.gov HIPAA Safe Harbor](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) and [NCBI SOAP Note Guidelines](https://www.ncbi.nlm.nih.gov/books/NBK482263/)
+* **Tech Stack:** [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), [NodeMailer](https://nodemailer.com/), and [Lucide](https://lucide.dev/)
+
+*For a complete list of detailed references, please see our [CITATIONS.md](CITATIONS.md) file.*
+
+---
+
 <div align="center">
   <p><i>Built with precision for the future of healthcare.</i></p>
 </div>
